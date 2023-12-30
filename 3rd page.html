@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('file:///C:/Users/Haier/Downloads/image2.jpg'); /* Replace with your actual background image URL */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: white;
+    }
+   .top-bar {
+      background-color: rgba(255, 235, 235, 0.945);
+      padding: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .setting-icon {
+      background-color: rgb(109, 7, 7);
+      color: rgb(255, 255, 255);
+      padding: 10px;
+      border-radius: 50%;
+    }
+    .content-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .title {
+      font-size: 80px;
+      margin-top: 160px;
+      margin-bottom: 10px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-weight: bold;
+      font-style:normal;
+    }
+    .subtitle {
+      font-size: 45px;
+      margin-bottom: 20px;
+      font-family:Georgia, 'Times New Roman', Times, serif;
+      font-weight: bolder;
+    }
+    .button {
+      background-color: #800101;
+      color: white;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      font-weight: bolder;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.8s;
+    }
+    .button:hover
+    {
+     background-color: #fd8d8d;
+     top:0;
+     border-radius:  50% 50%  0% 0%;
+    
+   }
+    /* Dashboard Styling */
+    .dashboard {
+      background-color:#fffcfcdc;
+      padding: 10px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 200px;
+      height: 990px;
+      margin-top: 0px;
+    
+    }
+
+    .dashboard-title {
+      font-size: 20px;
+      color: rgb(109, 7, 7);
+      font-family:Georgia, 'Times New Roman', Times, serif;
+      font-weight: bolder;
+      font-style: oblique;
+      margin-bottom: 250px;
+   }
+   
+   .dashboard-button {
+     margin-top: 0px ;
+      width: 140px;
+      max-height:10px;
+      border-radius: 10px;
+      padding: 28px;
+      left:0;
+      right:10;
+      margin-bottom: 5px;
+      background-color:#fcc3c3c5 ;
+      color:rgb(150, 0, 25) ;
+      font-size: 15px;
+      font-family:Georgia, 'Times New Roman', Times, serif;
+      text-align: center;
+      font-weight:bold ;
+      cursor: pointer;
+      transition: 0.8s;
+  }
+   
+   
+     .preview-button {
+      width: 140px;
+      padding: 12px;
+      border-radius: 100px;
+      background-color: #fcc2c2;
+      color: rgb(126, 0, 21);
+      font-size: 20px;
+      text-align: center;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.8s;
+      position: absolute;
+      bottom: -310px;
+      left:0;
+      right:10px;
+
+
+    }
+    .preview-button:hover {
+      background-color: #ffa3a3d2;
+    }
+
+
+   .dashboard-button:hover
+    {
+     background-color: #fcb2b2;
+     top:0;
+     border-radius:  50% 50%  0% 0%;
+    } 
+ 
+    .next-button {
+      width: 140px;
+      padding: 12px;
+      border-radius: 100px;
+      background-color: #fcc2c2;
+      color: rgb(126, 0, 21);
+      font-size: 20px;
+      text-align: center;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.8s;
+      position: absolute;
+      bottom: -310px;
+      left:1097px;
+      right:0px;
+
+
+    }
+    .next-button:hover {
+      background-color: #ffa3a3d2;
+    }
+
+
+  </style>
+</head>
+<body>
+
+  <!-- Empty space for the dashboard on the left side -->
+
+  <div class="top-bar">
+    <div class="setting-icon">⚙</div>
+  </div>
+  
+  <div class="dashboard">
+    <div class="dashboard-title">Elite
+    <div class="dashboard-title">Occassions</div></div>
+    <div class="dashboard-button">Home</div>
+    <div class="dashboard-button">Event Booking</div>
+    <div class="dashboard-button">Details</div>
+    <div class="dashboard-button">Registration</div>
+    <div class="dashboard-button">About Us</div>
+    
+    
+  </div>
+
+  <div class="preview-button"> Preview  </div>
+
+  <div class="next-button"> Next</div>
+
+
+  <div style="position: absolute; top: 0; left: 0; width: 200px; height: 100%; background-color: transparent;"></div>
+
+  <div class="content-container">
+    <div class="title">Welcome to Elite Occasions</div>
+    <div class="subtitle">Pakistan's Best Event Management Website</div>
+    <button class="button">BOOK NOW</button>
+  </div>
+
+</body>
+</html>
