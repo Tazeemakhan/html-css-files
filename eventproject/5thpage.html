@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: maroon;
+
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: white;
+        }
+
+        .top-bar {
+            background-color: rgba(255, 235, 235, 0.945);
+            padding: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .setting-icon {
+            background-color: rgb(109, 7, 7);
+            color: rgb(255, 255, 255);
+            padding: 10px;
+            border-radius: 50%;
+        }
+
+        /* Dashboard Styling */
+        .dashboard {
+            background-color: #fffcfcdc;
+            padding: 10px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 990px;
+            margin-top: 0px;
+            position: absolute;
+        }
+
+        .dashboard-title {
+            font-size: 20px;
+            color: rgb(109, 7, 7);
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: bolder;
+            font-style: oblique;
+            margin-bottom: 250px;
+        }
+
+        .dashboard-button {
+            margin-top: 0px;
+            width: 140px;
+            max-height: 10px;
+            border-radius: 10px;
+            padding: 28px;
+            left: 0;
+            right: 10;
+            margin-bottom: 5px;
+            background-color: #fcc3c3c5;
+            color: rgb(150, 0, 25);
+            font-size: 15px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-align: center;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.8s;
+        }
+
+        .dashboard-button:hover {
+            background-color: #fcb2b2;
+            top: 0;
+            border-radius: 50% 50% 0% 0%;
+        }
+
+        .preview-button {
+            width: 140px;
+            padding: 12px;
+            border-radius: 100px;
+            background-color: #fcc2c2;
+            color: rgb(126, 0, 21);
+            font-size: 20px;
+            text-align: center;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.8s;
+            position: absolute;
+            bottom: -310px;
+            left: 0;
+            right: 10px;
+        }
+
+        .preview-button:hover {
+            background-color: #ffa3a3d2;
+        }
+
+        .next-button {
+            width: 140px;
+            padding: 12px;
+            border-radius: 100px;
+            background-color: #fcc2c2;
+            color: rgb(126, 0, 21);
+            font-size: 20px;
+            text-align: center;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.8s;
+            position: absolute;
+            bottom: -310px;
+            left: 1097px;
+            right: 0px;
+        }
+
+        .next-button:hover {
+            background-color: #ffa3a3d2;
+        }
+
+        .picture {
+            width: 250px;
+            height: 250px;
+            margin-left: 320px;
+            margin-top: 20px;
+            float: left;
+        }
+
+        .title {
+            font-size: 64px;
+            font-weight: bolder;
+            margin-top: 130px;
+            margin-left: 320px;
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .info {
+            margin-bottom: 10px;
+        }
+
+        .title2 {
+            font-size: 34px;
+            font-weight: bolder;
+            margin-top: 6px;
+            margin-left: 320px;
+            text-align: left;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .textbox-container {
+            text-align: center;
+         
+        }
+
+        .input-box {
+            background-color: rgba(247, 219, 223, 0.849);
+            padding: 15px 7px 15px 7px;
+            width: 780px;
+
+            border: 1px solid #f7f7f7;
+            margin-bottom: 10px;
+            border-radius: 3px;
+            box-shadow: #000000f3;
+            margin-left: 320px;
+            margin-right: 40px;
+            cursor: text;
+        }
+
+        .input-box:hover {
+            background-color: #ffffffd2;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="top-bar">
+        <div class="setting-icon">⚙</div>
+    </div>
+
+    <div class="dashboard">
+        <div class="dashboard-title">Elite Occasions</div>
+        <div class="dashboard-button">Home</div>
+        <div class="dashboard-button">Event Booking</div>
+        <div class="dashboard-button">Details</div>
+        <div class="dashboard-button">Registration</div>
+        <div class="dashboard-button">About Us</div>
+    </div>
+
+    <div class="preview-button">Preview</div>
+
+    <div class="next-button">Next</div>
+
+    <div class="picture">
+        <img src="C:\Users\Haier\Downloads\Rectangle_14-removebg-preview.png" alt="Event Picture" width="100%">
+    </div>
+
+    <div class="title">
+        Crafting Moments<br> Not Just Events
+    </div>
+
+    <div class="info">
+        <div class="title2">start Date   :</div>
+        <div class="textbox-container">
+            <input type="text" class="input-box" placeholder="Type your start date...">
+        </div>
+
+        <div class="title2">End Date:</div>
+        <div class="textbox-container">
+            <input type="text" class="input-box" placeholder="Type your end date...">
+        </div>
+        <div class="title2">Catering :</div>
+        <div class="textbox-container">
+            <input type="text" class="input-box" placeholder="Type your catering details...">
+        </div>
+        <div class="title2">Decoration :</div>
+        <div class="textbox-container">
+            <input type="text" class="input-box" placeholder="Type your deciration details...">
+        </div>
+        <div class="title2">Venue :</div>
+        <div class="textbox-container">
+            <input type="text" class="input-box" placeholder="Type your venue details...">
+        </div>
+        <script src="script4.js"></script>
+    </body>
+    </html>

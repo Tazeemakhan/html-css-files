@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: maroon;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .top-bar {
+            background-color: rgba(255, 235, 235, 0.945);
+            padding: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .setting-icon {
+            background-color: rgb(109, 7, 7);
+            color: rgb(255, 255, 255);
+            padding: 10px;
+            border-radius: 50%;
+        }
+
+        /* Dashboard Styling */
+        .dashboard {
+            background-color: #fffcfcdc;
+            padding: 10px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 990px;
+            margin-top: 0px;
+            position: absolute;
+        }
+
+        .dashboard-title {
+            font-size: 20px;
+            color: rgb(109, 7, 7);
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: bolder;
+            font-style: oblique;
+            margin-bottom: 250px;
+        }
+
+        .dashboard-button {
+            margin-top: 0px;
+            width: 140px;
+            max-height: 10px;
+            border-radius: 10px;
+            padding: 28px;
+            left: 0;
+            right: 10;
+            margin-bottom: 5px;
+            background-color: #fcc3c3c5;
+            color: rgb(150, 0, 25);
+            font-size: 15px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-align: center;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.8s;
+        }
+
+        .dashboard-button:hover {
+            background-color: #fcb2b2;
+            top: 0;
+            border-radius: 50% 50% 0% 0%;
+        }
+
+        .preview-button {
+            width: 140px;
+            padding: 12px;
+            border-radius: 100px;
+            background-color: #fcc2c2;
+            color: rgb(126, 0, 21);
+            font-size: 20px;
+            text-align: center;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.8s;
+            position: absolute;
+            bottom: -310px;
+            left: 0;
+            right: 10px;
+        }
+
+        .preview-button:hover {
+            background-color: #ffa3a3d2;
+        }
+
+        .exit-button {
+            width: 140px;
+            padding: 12px;
+            border-radius: 100px;
+            background-color: #fdc6c6;
+            color: rgb(119, 2, 2);
+            font-size: 20px;
+            text-align: center;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.8s;
+            position: absolute;
+            bottom: -310px;
+            left: 1097px;
+            right: 0px;
+        }
+
+        .exit-button:hover {
+            background-color: #ffa3a3d2;
+        }
+
+        #main-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #elevate-text {
+            font-size: 54px;
+            margin-top:100px ;
+            margin-bottom: 10px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: bolder;
+            margin-left: 170px;
+        
+        }
+
+        #express-text {
+            font-size: 54px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: bolder;
+            margin-left: 190px;
+
+
+        }
+
+        #contact-box {
+            background-color: rgba(216, 203, 203, 0.842);
+            padding: 10px 40px 10px 40px;
+            border-radius: 0px;
+            margin-top: 50px;
+            margin-bottom: 20px;
+           
+            margin-left: 200px;
+        }
+
+        #contact-info {
+            color: maroon;
+            font-weight: bolder;
+            font-family: cursive ;
+            margin-bottom: 10px;
+            font-size: 25px;
+        }
+        #contact-box2 {
+            background-color: rgba(253, 247, 247, 0.616);
+            padding: 5px 30px 5px 30px ;
+            border-radius: 0px;
+            margin-bottom: 20px;
+            margin-top:39px ;
+            margin-left: 220px;
+            font-size: 70px;
+            font-family: cursive;
+          
+
+        }
+     
+        #contact-info2 {
+            color: rgb(236, 236, 236);
+            font-weight: bolder;
+            margin-bottom: 10px;
+            margin-left: 30px;
+           
+        }
+
+        .picture1 {
+            width: 100px;
+            height: 150px;
+            margin-left:40px;
+            margin-top: 20px;
+            float: left;
+        }
+    
+        .picture1 {
+            width: 150px;
+            height: 180px;
+            margin-left:20px;
+            margin-top: 2px;
+            float: left;
+        }
+        .custom-dialog {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(255, 163, 163, 0.911);
+        padding: 20px 130px 20px 130px;
+        border: 1px solid #660000;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        border-radius: 0px 20px 0px 20px;
+    }
+     
+    .custom-dialog button {
+        background-color: #5e0000; /* Green background */
+        color: white; /* White text color */
+        padding: 10px 20px; /* Padding */
+        border: none; /* No border */
+        border-radius: 5px; /* Rounded corners */
+        cursor: pointer; /* Pointer cursor on hover */
+        margin: 5px; /* Margin between buttons */
+        font-size: 16px; /* Font size */
+    }
+
+    .custom-dialog button.cancel {
+        background-color: #f5a6a1; /* Red background for cancel button */
+    } 
+    .custom-dialog:hover
+    {
+        background-color: #f1938b;
+        
+    }
+    .custom-dialog button:hover
+    {
+        background-color: #f77364;
+        
+    }
+
+
+
+
+     
+    
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="setting-icon">⚙</div>
+    </div>
+
+    <div class="dashboard">
+        <div class="dashboard-title">Elite Occasions</div>
+        <div class="dashboard-button">Home</div>
+        <div class="dashboard-button">Event Booking</div>
+        <div class="dashboard-button">Details</div>
+        <div class="dashboard-button">Registration</div>
+        <div class="dashboard-button">About Us</div>
+    </div>
+
+    <div class="preview-button">Preview</div>
+
+    <div class="exit-button">EXIT</div>
+
+    <div id="main-container">
+        <div id="elevate-text">Elevate Your Occasions</div>
+        <div id="express-text">With Our Express</div>
+
+        <div id="contact-box">
+            <div id="contact-info">Contact Info</div>
+            </div>
+         <div id="contact-box2" > 
+            
+                <div class="picture1">
+            <img src="file:///C:/Users/Haier/Downloads/Gmail_Logo_PNG_-_Free_Download-removebg-preview.png " alt="email" width="100%">
+            </div> eliteoccasions@gmail.com<br>
+           
+            <div class="picture1">
+                <img src="
+                file:///C:/Users/Haier/Downloads/Whatsapp_Ios_Icon_PNG_Transparent_With_Clear_Background_ID_473386_png_-_Free_PNG_Images-removebg-preview.png" alt="whatsapp" width="100%">
+                
+            </div> +923331231231
+            </div>
+        </div>
+    </div>
+    <div class="custom-dialog" id="exitDialog">
+    <p>Are you sure you want to exit?</p>
+    <button onclick="exitPage()">Yes</button>
+    <button onclick="cancelExit()">Cancel</button>
+</div>
+
+<div class="exit-button"onclick="showExitDialog()">EXIT</div>
+
+    <script src="script7.js"></script>
+    <script src="script8.js"></script>
+
+
+</body>
+</html>
