@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+          /*  background-color: rgb(95, 0, 0);*/
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-image: url('file:///C:/Users/Haier/Downloads/Download%20premium%20image%20of%20Red%20plain%20background%20with%20gold%20glittery%20by%20marinemynt%20about%20plain%20background,%20red%20background,%20maroon%20background,%20red,%20and%20red%20glitter%202358449.jpeg');
+             /* Replace with your actual background image URL */
+            /*background-image: url('file:///C:/Users/Haier/Downloads/image10.jpg');  Replace with your actual background image URL */
+            background-size:cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .top-bar {
+            background-color: rgba(255, 235, 235, 0.945);
+            width: 1380px;
+            padding: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 38px;
+        }
+
+
+
+        .picture {
+            width: 250px;
+            height: 250px;
+            margin-left:10px;
+            margin-top: 20px;
+            float: left;
+        }
+
+
+
+        .container {
+            padding-top: 50px;
+        }
+
+        .congratulations-text {
+            font-size: 89px;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bolder;
+            margin-top: 130px;
+           
+        
+        }
+
+        .event-text {
+            font-size: 66px;
+            font-weight: bolder;
+            margin-top: 60px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+       /* img {
+            width: 1500px;
+            padding: 0px;
+            height: 1000px;
+            display: block;
+            margin-left: 10px;
+        } */
+        .picture2 {
+            width: 250px;
+            height: 250px;
+            margin-left: 220px;
+            margin-right: 120px;
+            margin-top: 20px;
+            float: right;
+        }
+
+
+        .exit-button
+         {
+
+      width: 140px;
+      padding: 12px;
+      border-radius: 100px;
+      background-color: #fcc2c2;
+      color: rgb(126, 0, 21);
+      font-size: 20px;
+      text-align: center;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.8s;
+      position: absolute;
+      bottom: -310px;
+      left:1097px;
+      right:0px;
+
+
+    }
+        
+
+        .exit-button:hover {
+            background-color: #ffa3a3d2;
+        }
+
+        .custom-dialog {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(255, 163, 163, 0.911);
+        padding: 20px 130px 20px 130px;
+        border: 1px solid #660000;
+        box-shadow: 0 21px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        border-radius:0 20px 0px 20px ;
+
+    }
+
+    .custom-dialog button {
+        background-color: #5e0000; /* Green background */
+        color: white; /* White text color */
+        padding: 10px 20px; /* Padding */
+        border: none; /* No border */
+        border-radius: 5px; /* Rounded corners */
+        cursor: pointer; /* Pointer cursor on hover */
+        margin: 5px; /* Margin between buttons */
+        font-size: 16px; /* Font size */
+    }
+
+    .custom-dialog button.cancel {
+        background-color: #f5a6a1; /* Red background for cancel button */
+    } 
+    .custom-dialog:hover
+    {
+        background-color: #f1938b;
+        
+    }
+    .custom-dialog button:hover
+    {
+        background-color: #f77364;
+        
+    }
+
+    
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+    
+
+
+
+    <div class="top-bar">
+    </div>
+    <div class="picture">
+        <img src="C:\Users\Haier\Downloads\Rectangle_14-removebg-preview.png" alt="Event Picture" width="100%">
+    </div>
+
+
+
+    <div class="container">
+        <div style="position: absolute; top: 0; left: 0; width: 200px; height: 100%; background-color: transparent;"></div>
+        <div class="congratulations-text">CONGRATULATIONS</div>
+        <div class="event-text">EVENT BOOKED<br>
+             SUCCESSFULLY</div>
+    </div>
+
+    <div class="picture2">
+        <img src="C:\Users\Haier\Downloads\Rectangle_14-removebg-preview.png" alt="Event Picture" width="100%">
+    </div>
+    <div class="custom-dialog" id="exitDialog">
+        <p>Are you sure you want to exit?</p>
+        <button onclick="exitPage()">Yes</button>
+        <button onclick="cancelExit()">Cancel</button>
+    </div>
+    
+    <div class="exit-button"onclick="showExitDialog()">EXIT</div>
+    <script src="script6.js"></script>
+</body>
+
+</html>
