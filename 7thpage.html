@@ -106,16 +106,72 @@
             background-color: #ffa3a3d2;
         }
 
+        .custom-dialog {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(255, 163, 163, 0.911);
+        padding: 20px 130px 20px 130px;
+        border: 1px solid #660000;
+        box-shadow: 0 21px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        border-radius:0 20px 0px 20px ;
 
+    }
 
+    .custom-dialog button {
+        background-color: #5e0000; /* Green background */
+        color: white; /* White text color */
+        padding: 10px 20px; /* Padding */
+        border: none; /* No border */
+        border-radius: 5px; /* Rounded corners */
+        cursor: pointer; /* Pointer cursor on hover */
+        margin: 5px; /* Margin between buttons */
+        font-size: 16px; /* Font size */
+    }
 
+    .custom-dialog button.cancel {
+        background-color: #f5a6a1; /* Red background for cancel button */
+    } 
+    .custom-dialog:hover
+    {
+        background-color: #f1938b;
+        
+    }
+    .custom-dialog button:hover
+    {
+        background-color: #f77364;
+        
+    }
 
-
-
+    
     </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </head>
 
 <body>
+
+    
+
+
+
     <div class="top-bar">
     </div>
     <div class="picture">
@@ -134,9 +190,14 @@
     <div class="picture2">
         <img src="C:\Users\Haier\Downloads\Rectangle_14-removebg-preview.png" alt="Event Picture" width="100%">
     </div>
-
-
-    <div class="exit-button">EXIT</div>
+    <div class="custom-dialog" id="exitDialog">
+        <p>Are you sure you want to exit?</p>
+        <button onclick="exitPage()">Yes</button>
+        <button onclick="cancelExit()">Cancel</button>
+    </div>
+    
+    <div class="exit-button"onclick="showExitDialog()">EXIT</div>
+    <script src="script6.js"></script>
 </body>
 
 </html>

@@ -97,12 +97,12 @@
             background-color: #ffa3a3d2;
         }
 
-        .book-button {
+        .next-button {
             width: 140px;
             padding: 12px;
             border-radius: 100px;
-            background-color: #fdc6c6;
-            color: rgb(119, 2, 2);
+            background-color: #fcc2c2;
+            color: rgb(126, 0, 21);
             font-size: 20px;
             text-align: center;
             font-weight: bold;
@@ -114,7 +114,7 @@
             right: 0px;
         }
 
-        .book-button:hover {
+        .next-button:hover {
             background-color: #ffa3a3d2;
         }
 
@@ -161,16 +161,14 @@
             border: 1px solid #f7f7f7;
             margin-bottom: 10px;
             border-radius: 3px;
-            box-shadow: #000000;
+            box-shadow: #000000f3;
             margin-left: 320px;
             margin-right: 40px;
             cursor: text;
-            transition: 0.5s;
         }
 
         .input-box:hover {
             background-color: #ffffffd2;
-          
         }
 
     </style>
@@ -192,7 +190,7 @@
 
     <div class="preview-button">Preview</div>
 
-    <div class="book-button">BOOK</div>
+    <div class="next-button">Next</div>
 
     <div class="picture">
         <img src="C:\Users\Haier\Downloads\Rectangle_14-removebg-preview.png" alt="Event Picture" width="100%">
@@ -201,28 +199,29 @@
     <div class="title">
         Crafting Moments<br> Not Just Events
     </div>
-
+    <form action="personaldetail.php" method="post">
     <div class="info">
-        <div class="title2">Name :</div>
+        <div class="title2"> Name:</div>
         <div class="textbox-container">
-            <input type="text" class="input-box" placeholder="Type your name...">
+            <input type="text" class="input-box" placeholder="Type your start date...">
         </div>
 
-        <div class="title2">phone no :</div>
+        <div class="title2">Phone no:</div>
         <div class="textbox-container">
-           
-            <input type="text" id="phone" name="phone" class="input-box" placeholder="Enter phone number" pattern="[0-9]+" title="Only numeric values are allowed" required>
-        </div>
+            <input type="text" class="input-box" placeholder="Type your end date...">
         </div>
         <div class="title2">Password :</div>
         <div class="textbox-container">
-            <input type="text" class="input-box" placeholder="Type your password...">
+            <input type="text" class="input-box" placeholder="Type your catering details...">
         </div>
         <div class="title2">Email :</div>
         <div class="textbox-container">
-            <input type="text" class="input-box" placeholder="Type your Email...">
+            <input type="text" class="input-box" placeholder="Type your deciration details...">
         </div>
         <div class="title2">Address :</div>
         <div class="textbox-container">
-            <input type="text" class="input-box" placeholder="Type your Address...">
+            <input type="text" class="input-box" placeholder="Type your venue details...">
         </div>
+        <script src="script5.js"></script>
+    </body>
+    </html>

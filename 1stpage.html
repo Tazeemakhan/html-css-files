@@ -84,12 +84,11 @@
       height:400px;  
       margin-bottom: 20px; /* Adjust the margin as needed */
     }
-  </style>
+</style>
 </head>
 <body>
-
   <div class="top-bar">
-    <div class="setting-icon">⚙</div>
+    <div  id="setting-icon" class="setting-icon">⚙</div>
   </div>
   <div class="picture1">
     <img src="C:\Users\Haier\Downloads\Rectangle_14-removebg-preview.png" alt="Event Picture" width="100%">
@@ -109,6 +108,13 @@
     <!-- Place your second sigle 14.jpgde image here -->
     <img src="file:///C:/Users/Haier/Downloads/img.jpg" alt="Side Image 2" class="side-image">
   </div>
+
+  <script>
+    document.getElementById('setting-icon').addEventListener('click', function() {
+      window.location.href = '2ndpage.html';
+    });
+  </script>
+
 
 </body>
 </html>
